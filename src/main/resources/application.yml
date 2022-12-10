@@ -1,0 +1,17 @@
+server:
+  error:
+    include-stacktrace: never
+  port: 9001
+
+spring:
+  datasource:
+    initialization-mode: always
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/finance
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+  liquibase:
+    change-log: classpath:liquibase/master.xml
